@@ -57,15 +57,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+
         >
 
 
         <ImageButton
             android:id="@+id/BotonReduce"
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_marginRight="228dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="160dp"
             android:backgroundTint="@color/orange"
             android:src="@drawable/reducir" />
 
@@ -73,8 +75,7 @@
         <ImageButton
             android:id="@+id/BotonRestaura"
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_marginLeft="3dp"
+            android:layout_height="match_parent"
             android:backgroundTint="@color/orange"
             android:src="@drawable/eliminar" />
 

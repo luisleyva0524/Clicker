@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 
     class MainActivity : AppCompatActivity() {
@@ -31,12 +32,21 @@ import androidx.appcompat.app.AlertDialog
         tv_contador.setText("${cuenta}")
     }
 
-
     btn_reduce.setOnClickListener {
-            cuenta--
-            tv_contador.setText("${cuenta}")
-    }
 
+      try {
+          if (cuenta <= 0) {
+              Toast.makeText(this, "Contador en 0", Toast.LENGTH_SHORT).show()
+              tv_contador.setText("0")
+          } else {
+              cuenta--
+              tv_contador.setText("${cuenta}")
+          }
+      } catch (e: Exception) {
+          e.message
+      }
+
+    }
 
     btn_restaura.setOnClickListener {
         val alertDialog: AlertDialog? = this?.let {
